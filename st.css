@@ -47,9 +47,9 @@ input{
 button{
 	width:15vw;
 	height:3vw;
+	padding:1.2vh 0;
 	font-size:3vh;
 	color:#0E330E;
 	background-color:#87AD87;
-	align-items:center;
 	cursor:pointer;
 }button:hover{opacity:0.3;}

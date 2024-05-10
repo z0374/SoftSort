@@ -24,7 +24,7 @@ function ns(){
 function st(){
 	let omg ='';
 	alf = cmp.value;
-	extxt('h1', `Sorteio do ${alf}`, 'sth');
+	extxt('h1', `Sorteio do<br> ${alf}`, 'sth');
 	extxt('h2', 'Escolha o número final')
 	btn('SETAR', 'stt()');
 	lmp();
@@ -33,14 +33,14 @@ function st(){
 function stt(){
 	omg = cmp.value;
 	extxt('h2','Escolha a quantidade de números');
-	extxt('h1', `Sorteio do ${alf} ao ${omg}`,'sth');
+	extxt('h1', `Sorteio do<br> ${alf} ao ${omg}`,'sth');
 	btn('SETAR', 'sttt()');
 	lmp();
 }
 function sttt(){
 	qtnm = cmp.value;
 	extxt('h1', `SORTEIO`,'sth');
-	extxt('h2', `${qtnm} números do ${alf} até o ${omg}`,'rst');
+	extxt('h2', `${qtnm} números do ${alf} ao ${omg}`,'rst');
 	cmp.setAttribute('hidden', true);
 	btn('SORTEAR', 'srt()');
 	lmp();
@@ -50,7 +50,16 @@ function sttt(){
 function srt(){
 	let nr = parseInt(Math.random() * omg + 1);
 	if(nr < alf){srt();}
-	else{ 
+else{
+	for( var s = 0; s < rst.length; s++) {
+
+            if( rst[s] == nr) {
+
+                srt()
+            }
+        }
+
+
 		if(qtnm > rst.length){
 			rst.push(nr);
 			srt();
